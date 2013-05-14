@@ -1,7 +1,7 @@
 server: irc.freenode.net
 nick: rallybot
 channels:
-  - #somechannel
+  - "#somechannel"
 username: rally user
 password: rally pass
 workspace: rally workspace
