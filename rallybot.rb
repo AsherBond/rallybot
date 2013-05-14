@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+
 $LOAD_PATH.unshift(*Dir[File.dirname(__FILE__) + "/vendor/gems/**/lib"])
 require 'yaml'
 require 'cinch'
