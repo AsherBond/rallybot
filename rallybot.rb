@@ -155,6 +155,16 @@ bot = Cinch::Bot.new do
     m.reply "#{m.user.nick}: Created #{obj_id}"
   end
 
+  on :message, /^rallybot: help$/ do |m|
+    help_msg = Array.new
+    help_msg.push("show board -- will show the current rally board")
+    help_msg.push("show (story|task|defect) <rallyid> -- will show you contents of the (story|task|defect)")
+    help_msg.push("update (story|task|defect) <rallyid> <update comment> -- will append <update comment> to the Notes section of the (story|task|defect)")
+    help_msg.push("create (story|defect) <comment> -- will create a (story|defect) with a Name of <comments>")
+    help_msg.push("create task <parrent rallyid> <comment> -- will create a task with the Name of <comments>, setting new task as a child of <parent rallyid>" )
+    m.reply "jcannava: #{help_msg.join("\r")}"
+  end
+
   trap "SIGINT" do
     bot.quit
   end
