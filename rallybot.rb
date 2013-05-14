@@ -128,14 +128,14 @@ bot = Cinch::Bot.new do
   end
 
   on :message, /^rallybot: show board/ do |m|
-    m.reply "#{m.user.nick}: showing board in a private msg"
+    # m.reply "#{m.user.nick}: showing board in a private msg"
     msg = show_board()
     # reply directly to user
     User(m.user.nick).send msg
   end
 
   on :message, /^rallybot: show (story|task|defect) ([a-zA-Z]{2}[0-9]{1,5})$/ do |m, obj, id|
-    m.reply "#{m.user.nick}: showing #{id} in a private msg"
+    # m.reply "#{m.user.nick}: showing #{id} in a private msg"
     msg = show_object(obj, id)
     User(m.user.nick).send msg
   end
