@@ -162,7 +162,7 @@ bot = Cinch::Bot.new do
     help_msg.push("update (story|task|defect) <rallyid> <update comment> -- will append <update comment> to the Notes section of the (story|task|defect)")
     help_msg.push("create (story|defect) <comment> -- will create a (story|defect) with a Name of <comments>")
     help_msg.push("create task <parrent rallyid> <comment> -- will create a task with the Name of <comments>, setting new task as a child of <parent rallyid>" )
-    m.reply "jcannava: #{help_msg.join("\r")}"
+    m.reply "#{help_msg.join("\r")}"
   end
 
   trap "SIGINT" do
